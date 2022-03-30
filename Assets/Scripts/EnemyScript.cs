@@ -1,7 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/*
+ * EnemyScript, se encarga del comportamiento del enemigo.
+ * 
+ * @author: jreyes
+ */
 public class EnemyScript : MonoBehaviour
 {
     public GameObject player;
@@ -9,6 +13,10 @@ public class EnemyScript : MonoBehaviour
 
     public float lastShoot;
 
+    /*
+     * verifica principalmente de que lado está el jugador para seguirlo
+     * con la mirada, en caso de que este cerca se ejecuta el disparo.
+     */
     private void Update()
     {
         Vector3 direction = player.transform.position - transform.position;
@@ -22,7 +30,10 @@ public class EnemyScript : MonoBehaviour
             Shot();
         }
     }
-
+    /*
+     * este metodo se encarga de disparar el objeto pre-fabricado de bullet segun la direccion
+     * a la que el NPC se encuentre mirando.
+     */
     private void Shot()
     {
         Vector3 direction;

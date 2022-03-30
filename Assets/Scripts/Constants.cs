@@ -1,6 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
-
+/*
+ * Constants, Contiene las constantes que se usan en los demás scripts
+ * 
+ * @author: jreyes
+ */
 public class Constants
 {
     public static string PLAYER = "Player";
